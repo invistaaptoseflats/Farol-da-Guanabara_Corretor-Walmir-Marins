@@ -652,6 +652,328 @@ Clique aqui</font></b></a><b> e agende uma visita </b></font></font></font></fon
 <!-- /wp:group  TRADICÃO E QUALIDADE CURY -->
 
 
+<!-- Vendas e Stands -->
+
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Cabeçalho e Logo */
+        .header {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .logo {
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #3498db;
+        }
+        
+        /* Carrossel */
+        .carousel-container {
+            position: relative;
+            margin: 40px auto;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .carousel-slide {
+            flex: 0 0 calc(50% - 15px);
+            margin: 0 7.5px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .carousel-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .carousel-slide:hover .carousel-image {
+            transform: scale(1.03);
+        }
+        
+        /* Navegação do Carrossel */
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            color: #3498db;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carousel-control:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .carousel-control.prev {
+            left: 15px;
+        }
+        
+        .carousel-control.next {
+            right: 15px;
+        }
+        
+        /* Indicadores */
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            list-style: none;
+        }
+        
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #bbb;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .carousel-indicator.active {
+            background-color: #3498db;
+        }
+        
+        /* Rodapé */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .carousel-slide {
+                flex: 0 0 calc(100% - 15px);
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .carousel-control {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .carousel-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="https://invistaaptoseflats.github.io/Farol-da-Guanabara_Corretor-Walmir-Marins/Logowalmirmarins.png" alt="Logo Walmir Marins" class="logo">
+            <h1 class="title">Stand de Vendas</h1>
+        </header>
+        
+        <section class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide">
+                    <img src="https://invistaaptoseflats.github.io/Farol-da-Guanabara_Corretor-Walmir-Marins/stand1.png" alt="Stand de Vendas 1" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://invistaaptoseflats.github.io/Farol-da-Guanabara_Corretor-Walmir-Marins/stand2.png" alt="Stand de Vendas 2" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://invistaaptoseflats.github.io/Farol-da-Guanabara_Corretor-Walmir-Marins/stand3.png" alt="Stand de Vendas 3" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://invistaaptoseflats.github.io/Farol-da-Guanabara_Corretor-Walmir-Marins/stand4.png" alt="Stand de Vendas 4" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://invistaaptoseflats.github.io/Farol-da-Guanabara_Corretor-Walmir-Marins/stand5.png" alt="Stand de Vendas 5" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://invistaaptoseflats.github.io/Farol-da-Guanabara_Corretor-Walmir-Marins/stand6.png" alt="Stand de Vendas 6" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://invistaaptoseflats.github.io/Farol-da-Guanabara_Corretor-Walmir-Marins/stand7.png" alt="Stand de Vendas 7" class="carousel-image">
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://invistaaptoseflats.github.io/Farol-da-Guanabara_Corretor-Walmir-Marins/stand8.png" alt="Stand de Vendas 8" class="carousel-image">
+                </div>
+            </div>
+            
+            <button class="carousel-control prev">&#10094;</button>
+            <button class="carousel-control next">&#10095;</button>
+            
+            <ul class="carousel-indicators">
+                <!-- Os indicadores serão gerados via JavaScript -->
+            </ul>
+        </section>
+        
+        <footer class="footer">
+            <p>&copy; 2025 Walmir Marins - Todos os direitos reservados</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.carousel-track');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const prevBtn = document.querySelector('.carousel-control.prev');
+            const nextBtn = document.querySelector('.carousel-control.next');
+            const indicatorsContainer = document.querySelector('.carousel-indicators');
+            
+            let slideWidth = slides[0].getBoundingClientRect().width + 15; // Largura do slide + margem
+            let currentIndex = 0;
+            let autoPlayInterval;
+            let slidesPerView = window.innerWidth > 768 ? 2 : 1;
+            
+            // Inicializar indicadores :cite[4]:cite[8]
+            slides.forEach((_, i) => {
+                const indicator = document.createElement('li');
+                indicator.classList.add('carousel-indicator');
+                if (i === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => {
+                    goToSlide(i);
+                });
+                indicatorsContainer.appendChild(indicator);
+            });
+            
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            
+            // Ajustar slides por visualização com base no tamanho da tela :cite[7]:cite[8]
+            function updateSlidesPerView() {
+                slidesPerView = window.innerWidth > 768 ? 2 : 1;
+                slideWidth = slides[0].getBoundingClientRect().width + 15;
+                goToSlide(currentIndex);
+            }
+            
+            window.addEventListener('resize', updateSlidesPerView);
+            
+            // Ir para slide específico
+            function goToSlide(index) {
+                // Ajustar índice para não ultrapassar os limites
+                if (index < 0) {
+                    index = slides.length - slidesPerView;
+                } else if (index > slides.length - slidesPerView) {
+                    index = 0;
+                }
+                
+                currentIndex = index;
+                const moveX = -currentIndex * slideWidth;
+                track.style.transform = `translateX(${moveX}px)`;
+                
+                // Atualizar indicadores :cite[4]
+                indicators.forEach((indicator, i) => {
+                    indicator.classList.toggle('active', i === currentIndex);
+                });
+            }
+            
+            // Avançar slide
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+            
+            // Voltar slide
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+            
+            // Configurar autoplay :cite[1]:cite[4]
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(nextSlide, 5000); // Transição a cada 5 segundos
+            }
+            
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
+            
+            // Event listeners para os botões :cite[3]
+            nextBtn.addEventListener('click', () => {
+                stopAutoPlay();
+                nextSlide();
+                startAutoPlay();
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                stopAutoPlay();
+                prevSlide();
+                startAutoPlay();
+            });
+            
+            // Pausar autoplay quando o mouse estiver sobre o carrossel :cite[6]
+            const carousel = document.querySelector('.carousel-container');
+            carousel.addEventListener('mouseenter', stopAutoPlay);
+            carousel.addEventListener('mouseleave', startAutoPlay);
+            
+            // Inicializar
+            updateSlidesPerView();
+            startAutoPlay();
+        });
+    </script>
+
+    
+
+<!-- Vendas e Stands -->
 
 
 
