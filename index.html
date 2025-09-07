@@ -295,84 +295,71 @@ Clique aqui</font></b></a><b> e agende uma visita </b></font></font></font></fon
 
       <!-- MOSAICO NOVO -->
       
-<div class="wp-block-group mosaico-responsive">
-    <figure class="wp-block-image imagem-grande">
-        <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/AquaRio.png" alt="Descrição da imagem"/>
-    </figure>
+<!-- wp:html -->
+<div class="mosaico-gutenberg-container">
+    <div class="wp-block-group mosaico-responsive">
+        <figure class="wp-block-image imagem-grande">
+            <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/AquaRio.png" alt="AquaRio"/>
+        </figure>
 
-    <figure class="wp-block-image imagem-pequena">
-        <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/Aquario2.png" alt="Descrição da imagem"/>
-    </figure>
+        <figure class="wp-block-image imagem-pequena">
+            <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/Aquario2.png" alt="AquaRio Vista Interna"/>
+        </figure>
 
-    <figure class="wp-block-image imagem-grande">
-        <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/stadium1.png" alt="Descrição da imagem"/>
-    </figure>
+        <figure class="wp-block-image imagem-grande">
+            <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/stadium1.png" alt="Estádio"/>
+        </figure>
 
-    <figure class="wp-block-image imagem-pequena">
-        <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/stadium2.png" alt="Descrição da imagem"/>
-    </figure>
+        <figure class="wp-block-image imagem-pequena">
+            <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/stadium2.png" alt="Vista do Estádio"/>
+        </figure>
+    </div>
 </div>
 
 <style>
-.wp-block-group.mosaico-responsive {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 15px;
-    margin: 30px 0;
-}
-
-.wp-block-group.mosaico-responsive .wp-block-image {
-    margin: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.wp-block-group.mosaico-responsive img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.wp-block-group.mosaico-responsive .imagem-grande:nth-child(1) {
-    grid-row: 1 / 3;
-    grid-column: 1;
-    height: 100%;
-}
-
-.wp-block-group.mosaico-responsive .imagem-pequena:nth-child(2) {
-    grid-row: 1;
-    grid-column: 2;
-    height: 100%;
-}
-
-.wp-block-group.mosaico-responsive .imagem-grande:nth-child(3) {
-    grid-row: 2;
-    grid-column: 2;
-    height: 100%;
-}
-
-.wp-block-group.mosaico-responsive .imagem-pequena:nth-child(4) {
-    grid-row: 3;
-    grid-column: 1;
-    height: 100%;
-}
-
-@media (max-width: 1024px) {
+    .mosaico-gutenberg-container {
+        margin: 30px 0;
+        padding: 0 15px;
+    }
+    
     .wp-block-group.mosaico-responsive {
-        grid-template-columns: 1fr 1fr;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 15px;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 600px;
+    }
+    
+    .wp-block-group.mosaico-responsive .wp-block-image {
+        margin: 0;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .wp-block-group.mosaico-responsive .wp-block-image:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    
+    .wp-block-group.mosaico-responsive img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
     }
     
     .wp-block-group.mosaico-responsive .imagem-grande:nth-child(1) {
-        grid-row: 1;
-        grid-column: 1 / 3;
+        grid-row: 1 / span 2;
+        grid-column: 1;
     }
     
     .wp-block-group.mosaico-responsive .imagem-pequena:nth-child(2) {
-        grid-row: 2;
-        grid-column: 1;
+        grid-row: 1;
+        grid-column: 2;
     }
     
     .wp-block-group.mosaico-responsive .imagem-grande:nth-child(3) {
@@ -381,25 +368,64 @@ Clique aqui</font></b></a><b> e agende uma visita </b></font></font></font></fon
     }
     
     .wp-block-group.mosaico-responsive .imagem-pequena:nth-child(4) {
-        grid-row: 3;
-        grid-column: 1 / 3;
-    }
-}
-
-@media (max-width: 768px) {
-    .wp-block-group.mosaico-responsive {
-        grid-template-columns: 1fr;
+        display: none;
     }
     
-    .wp-block-group.mosaico-responsive .imagem-grande:nth-child(1),
-    .wp-block-group.mosaico-responsive .imagem-pequena:nth-child(2),
-    .wp-block-group.mosaico-responsive .imagem-grande:nth-child(3),
-    .wp-block-group.mosaico-responsive .imagem-pequena:nth-child(4) {
-        grid-row: auto;
-        grid-column: 1;
+    @media (max-width: 1024px) {
+        .wp-block-group.mosaico-responsive {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr auto;
+            height: auto;
+        }
+        
+        .wp-block-group.mosaico-responsive .imagem-grande:nth-child(1) {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+        }
+        
+        .wp-block-group.mosaico-responsive .imagem-pequena:nth-child(2) {
+            grid-row: 2;
+            grid-column: 1;
+        }
+        
+        .wp-block-group.mosaico-responsive .imagem-grande:nth-child(3) {
+            grid-row: 2;
+            grid-column: 2;
+        }
+        
+        .wp-block-group.mosaico-responsive .imagem-pequena:nth-child(4) {
+            display: block;
+            grid-row: 3;
+            grid-column: 1 / span 2;
+            height: 200px;
+            margin-top: 15px;
+        }
     }
-}
+    
+    @media (max-width: 768px) {
+        .wp-block-group.mosaico-responsive {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 300px);
+            height: auto;
+            gap: 12px;
+        }
+        
+        .wp-block-group.mosaico-responsive .imagem-grande:nth-child(1),
+        .wp-block-group.mosaico-responsive .imagem-pequena:nth-child(2),
+        .wp-block-group.mosaico-responsive .imagem-grande:nth-child(3),
+        .wp-block-group.mosaico-responsive .imagem-pequena:nth-child(4) {
+            grid-row: auto;
+            grid-column: 1;
+        }
+        
+        .wp-block-group.mosaico-responsive .imagem-pequena:nth-child(4) {
+            display: block;
+            height: 100%;
+            margin-top: 0;
+        }
+    }
 </style>
+<!-- /wp:html -->
 
 
 
