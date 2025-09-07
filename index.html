@@ -295,64 +295,73 @@ Clique aqui</font></b></a><b> e agende uma visita </b></font></font></font></fon
 
       <!-- MOSAICO NOVO -->
       
-<!-- wp:columns {"align":"wide"} -->
-<div class="wp-block-columns alignwide">
+<!-- Grupo principal do mosaico -->
+<div class="wp-block-group mosaico">
+  
+  <!-- Imagem grande 1 -->
+  <figure class="wp-block-image imagem-grande">
+    <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/AquaRio.png" alt="Imagem Grande 1"/>
+  </figure>
 
-    <!-- Coluna Esquerda (duas imagens grandes) -->
-    <!-- wp:column {"width":"60%"} -->
-    <div class="wp-block-column" style="flex-basis:60%;">
-        
-        <figure class="wp-block-image size-full">
-            <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/stadium1.png" alt="Imagem 1"/>
-        </figure>
+  <!-- Imagem pequena 1 -->
+  <figure class="wp-block-image imagem-pequena">
+    <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/Aquario2.png" alt="Imagem Pequena 1"/>
+  </figure>
 
-        <figure class="wp-block-image size-full">
-            <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/stadium2.png" alt="Imagem 2"/>
-        </figure>
+  <!-- Imagem grande 2 -->
+  <figure class="wp-block-image imagem-grande">
+    <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/stadium1.png" alt="Imagem Grande 2"/>
+  </figure>
 
-    </div>
-    <!-- /wp:column -->
-
-    <!-- Coluna Direita (duas imagens menores) -->
-    <!-- wp:column {"width":"40%"} -->
-    <div class="wp-block-column" style="flex-basis:40%;">
-        
-        <figure class="wp-block-image size-full">
-            <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/AquaRio.png" alt="Imagem 3"/>
-        </figure>
-
-        <figure class="wp-block-image size-full">
-            <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/Aquario2.png" alt="Imagem 4"/>
-        </figure>
-
-    </div>
-    <!-- /wp:column -->
+  <!-- Imagem pequena 2 -->
+  <figure class="wp-block-image imagem-pequena">
+    <img src="https://raw.githubusercontent.com/invistaaptoseflats/Farol-da-Guanabara_Corretor-Walmir-Marins/main/stadium2.png" alt="Imagem Pequena 2"/>
+  </figure>
 
 </div>
-<!-- /wp:columns -->
 
+<!-- CSS do mosaico -->
 <style>
-/* Espaçamento entre imagens */
-.wp-block-image {
-    margin-bottom: 10px;
-}
-.wp-block-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    object-fit: cover;
+/* Layout do mosaico em desktops */
+.wp-block-group.mosaico {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Coluna esquerda maior */
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
 }
 
-/* Responsividade */
+/* Imagem grande ocupa toda a coluna esquerda */
+.wp-block-group.mosaico .imagem-grande {
+  grid-row: span 2; /* Ocupa duas linhas */
+}
+.wp-block-group.mosaico img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Responsivo para tablets */
+@media (max-width: 1024px) {
+  .wp-block-group.mosaico {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .wp-block-group.mosaico .imagem-grande {
+    grid-row: auto;
+  }
+}
+
+/* Responsivo para celulares */
 @media (max-width: 768px) {
-    .wp-block-columns.alignwide {
-        flex-direction: column !important;
-    }
-    .wp-block-column {
-        flex-basis: 100% !important;
-    }
+  .wp-block-group.mosaico {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
+
 
 
       <!-- MOSAICO NOVO -->
