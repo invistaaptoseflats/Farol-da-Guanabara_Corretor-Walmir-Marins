@@ -575,8 +575,8 @@ Clique aqui</font></b></a><b> e agende uma visita </b></font></font></font></fon
 </section>
 
 
-<!-- BOOK DIGITAL
-      
+<!-- BOOK DIGITAL -->
+
     <style>
         * {
             margin: 0;
@@ -590,159 +590,101 @@ Clique aqui</font></b></a><b> e agende uma visita </b></font></font></font></fon
             color: #333;
             line-height: 1.6;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        
-        .header {
+        .book-link-container {
             text-align: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-            color: white;
+            max-width: 800px;
+            width: 100%;
         }
         
         .logo {
             max-width: 250px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .pdf-container {
-            padding: 30px;
-            text-align: center;
-        }
-        
-        .pdf-viewer {
-            width: 100%;
-            height: 700px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 20px;
-        }
-        
-        .download-btn {
-            display: inline-block;
-            background: #3498db;
+        .book-link {
+            display: block;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
+            padding: 20px 40px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 1.5rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
         }
         
-        .download-btn:hover {
-            background: #2980b9;
+        .book-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .book-link:active {
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
         }
         
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 30px;
-            background: #f8f9fa;
+        .book-link::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            pointer-events: none;
         }
         
-        .feature {
-            flex: 1;
-            min-width: 250px;
-            text-align: center;
+        .book-description {
+            background: white;
             padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-top: 20px;
         }
         
-        .feature i {
-            font-size: 2.5rem;
-            color: #3498db;
+        .book-description h2 {
+            color: #2c3e50;
             margin-bottom: 15px;
         }
         
-        .feature h3 {
+        .book-description p {
+            color: #555;
             margin-bottom: 10px;
-            color: #2c3e50;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #2c3e50;
-            color: #ecf0f1;
-            font-size: 0.9rem;
         }
         
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .pdf-viewer {
-                height: 500px;
-            }
-            
-            .feature {
-                min-width: 100%;
+            .book-link {
+                font-size: 1.2rem;
+                padding: 15px 30px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-
-
-            <h1>Book Digital</h1>
-            <p class="subtitle">Explore nosso material exclusivo da Farol da Guanabara</p>
+    <div class="book-link-container">
+        
+        <a href="https://invistaaptoseflats.github.io/Farol-da-Guanabara_Corretor-Walmir-Marins/bookdigitalbaia.pdf" target="_blank" class="book-link">
+            Clique para abrir o book digital
+        </a>
+        
+        <div class="book-description">
+            <p>Nosso book digital apresenta informações exclusivas sobre o empreendimento Farol da Guanabara.</p>
+            <p>Ao clicar no link acima, o book será aberto em uma nova janela para sua conveniência.</p>
         </div>
-        
-        <div class="pdf-container">
-            <iframe src="https://docs.google.com/gview?url=https://invistaaptoseflats.github.io/Farol-da-Guanabara_Corretor-Walmir-Marins/bookdigitalbaia.pdf&embedded=true" class="pdf-viewer" frameborder="0"></iframe>
-            
-            <a href="https://invistaaptoseflats.github.io/Farol-da-Guanabara_Corretor-Walmir-Marins/bookdigitalbaia.pdf" download class="download-btn">
-                Download do Book Digital
-            </a>
-        </div>
-        
-        <div class="features">
+    </div>
+</body>
 
-            <div class="feature">
-            
-    <script>
-        // Função para detectar dispositivos móveis e ajustar a visualização
-        function isMobileDevice() {
-            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-        }
-        
-        // Ajustar visualizador de PDF se for dispositivo móvel
-        if (isMobileDevice()) {
-            document.querySelector('.pdf-viewer').style.height = '400px';
-        }
-        
-        // Adicionar evento de clique para o botão de download
-        document.querySelector('.download-btn').addEventListener('click', function() {
-            alert('O download do book digital começará em instantes!');
-        });
-    </script>
 
- BOOK DIGITAL-->
+<!-- BOOK DIGITAL-->
 
     
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"30px","bottom":"30px"}}},"layout":{"type":"constrained"}} -->
